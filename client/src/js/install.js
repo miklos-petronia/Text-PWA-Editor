@@ -22,3 +22,10 @@ butInstall.addEventListener('click', async () => {
 
     butInstall.classList.toggle('hidden', true);
 });
+
+// Operator for the `appinstalled` application
+window.addEventListener('appinstalled', (event) => {
+    // Illustrate a acceptance message to the end user
+    console.log('Jate has been installed on your device!');
+    window.deferredPrompt = null
+});
