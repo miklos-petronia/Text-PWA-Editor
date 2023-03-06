@@ -22,3 +22,12 @@ const editor = new Editor();
 if (typeof editor === 'undefined') {
     loadSpinner();
 }
+
+// Audit if service employees are backed
+if ('serviceWorker' in navigator) {
+    // Indicate workbox service employees
+    const workboxSW = new Workbox('/src-sw.js');
+    workboxSW.register();
+} else {
+    console.error('Service workers are not supported in this browser.');
+}
