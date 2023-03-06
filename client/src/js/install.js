@@ -16,3 +16,9 @@ butInstall.addEventListener('click', async () => {
 
     // Illustrate prompt
     promptEvent.prompt();
+
+    // Reconsruct the altered prompt element.
+    window.deferredPrompt = null;
+
+    butInstall.classList.toggle('hidden', true);
+});
