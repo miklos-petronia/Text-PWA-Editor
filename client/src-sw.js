@@ -26,3 +26,23 @@ warmStrategyCache({
 });
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
+
+// Arrange resource cache
+registerRoute(
+    // We characterize the callback application that will refine the demand we want to cache
+    ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+    new StaleWhileRevalidate({
+        // Name of the cache repository.
+        cacheName: 'asset-cache',
+        plugins: [
+            // This plugin will cache feedback with the headers to the max of 30 days
+            new CacheableResponsePlugin({
+                statuses: [0, 200],
+            }),
+            new ExpirationPlugin({
+                maxEntries: 60,
+                maxAgeSeconds: 30 * 24 * 60 * 60, 
+            })
+        ],
+    })
+);
