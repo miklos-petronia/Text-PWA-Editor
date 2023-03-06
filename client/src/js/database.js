@@ -21,3 +21,15 @@ export const putDb = async (content) => {
     const result = await request;
     console.log("Data saved", result);
 };
+
+// Argumentation for a approach that obtainss all the stories from the database application
+export const getDb = async () => {
+    const jateDB = await openDB("jate", 1);
+    const tx = jateDB.transaction("jate", "readonly");
+    const store = tx.objectStore("jate");
+    const request = store.getAll();
+    const result = await request;
+    console.log(result);
+};
+
+initdb();
