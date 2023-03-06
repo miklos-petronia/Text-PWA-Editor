@@ -13,3 +13,6 @@ butInstall.addEventListener('click', async () => {
     if (!promptEvent) {
         return;
     }
+
+    // Illustrate prompt
+    promptEvent.prompt();
