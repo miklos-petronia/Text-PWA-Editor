@@ -31,3 +31,11 @@ export default class {
         this.editor.on('change', () => {
             localStorage.setItem('content', this.editor.getValue());
         });
+
+        // Retain the stories of the editor when the editor loses its focus
+        this.editor.on('blur', () => {
+            console.log('The editor has lost focus');
+            putDb(localStorage.getItem('content'));
+        });
+    }
+}
