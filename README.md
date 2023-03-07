@@ -77,7 +77,3 @@ N/A
 ## BugReport
 - [Github](https://github.com/miklos-petronia)
 - [Email](mailto:miklos.petronia@hotmail.com)
-
-## BugReport
-- [Github](https://github.com/miklos-petronia)
-- [Email](mailto:miklos.petronia@hotmail.com)
