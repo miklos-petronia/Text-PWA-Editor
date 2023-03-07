@@ -55,9 +55,12 @@ THEN I should have proper build scripts for a webpack application
 
 ## Usage
 Click on the url below: 
+```h
 `https://text-pwa-editor007.herokuapp.com/`
+```
 
-### Application Screenshot:
+Application Screenshot:
+
 [<img src="./assets/images/Application_Screenshot.png">] (https://text-pwa-editor007.herokuapp.com/)
 
 ## License 
