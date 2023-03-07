@@ -58,6 +58,7 @@ Click on the url below:
 `https://text-pwa-editor007.herokuapp.com/`
 
 ### Application Screenshot:
+[<img src="./assets/images/Application_Screenshot.png">] (https://text-pwa-editor007.herokuapp.com/)
 
 ## License 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
